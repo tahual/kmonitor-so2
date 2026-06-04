@@ -1,1 +1,0 @@
-./kmonitor_memoria.o
