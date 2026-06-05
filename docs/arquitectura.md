@@ -58,11 +58,13 @@ el usuario hace `cat /proc/kmonitor_grupo9`. Realiza dos tareas:
 3. Por cada proceso escribe: PID, nombre y estado
 4. Libera el candado con `rcu_read_unlock()`
 
+---
 
 ### `abrir_archivo(struct inode *inode, struct file *file)`
 Función de apertura del archivo `/proc`. Conecta el archivo virtual con
 la función `mostrar_kmonitor()` usando `single_open()`.
 
+---
 
 ### `iniciar_modulo(void)`
 Se ejecuta automáticamente cuando se carga el módulo con `sudo insmod`.
@@ -71,6 +73,7 @@ Acciones que realiza:
 1. Crea el archivo `/proc/kmonitor_grupo9` con permisos de solo lectura (0444)
 2. Imprime un mensaje de confirmación en el ring buffer del kernel
 
+---
 
 ### `salir_modulo(void)`
 Se ejecuta automáticamente cuando se descarga el módulo con `sudo rmmod`.
@@ -79,6 +82,7 @@ Acciones que realiza:
 1. Elimina el archivo `/proc/kmonitor_grupo9`
 2. Imprime un mensaje de confirmación en el ring buffer del kernel
 
+---
 
 ## Diagrama de flujo
 
@@ -94,7 +98,7 @@ Acciones que realiza:
           │
           ├── proc_create("kmonitor_grupo9")
           │         │
-          │         └── Crea /proc/kmonitor_grupo9 
+          │         └── Crea /proc/kmonitor_grupo9 ✅
           │
           └── printk("Módulo cargado")
 
@@ -133,10 +137,12 @@ Acciones que realiza:
           │
           ├── remove_proc_entry("kmonitor_grupo9")
           │         │
-          │         └── Elimina /proc/kmonitor_grupo9 
+          │         └── Elimina /proc/kmonitor_grupo9 ✅
           │
           └── printk("Módulo descargado")
 ```
+
+---
 
 ## Flujo de interacción entre archivos
 
@@ -165,25 +171,28 @@ Makefile
               Métricas de RAM + Procesos
 ```
 
+---
 
 ## Tecnologías utilizadas
 
-Tecnologias           Versión                Uso
-Linux Kernel     6.17.0-23-generic    Entorno de ejecució
-GCC              13.3.0               Compilador de C
-make             GNU Make             Sistema de compilación 
-Git              2.43.0               Control de versiones 
-GitHub                                Repositorio remoto 
-Ubuntu           24.04 LTS            Sistema operativo de desarrollo 
+| Tecnología | Versión | Uso |
+|---|---|---|
+| Linux Kernel | 6.17.0-23-generic | Entorno de ejecución |
+| GCC | 13.3.0 | Compilador de C |
+| make | GNU Make | Sistema de compilación |
+| Git | 2.43.0 | Control de versiones |
+| GitHub | - | Repositorio remoto |
+| Ubuntu | 24.04 LTS | Sistema operativo de desarrollo |
+
+---
 
 ## Equipo de desarrollo — Grupo 9
 
-Integrantes            Trabajo Realizado
-David:           Desarrollo del módulo principal y demostración
-Derick:          Desarrollo del código kernel
-Dany:            Documentación y coordinación
-Marlon:          Documentación de estructuras y video
+| Integrante | Rol |
+|---|---|
+| David Moscoso | Desarrollo del módulo principal y demostración |
+| [Nombre Persona 1] | Desarrollo del código kernel |
+| [Tu nombre] | Documentación y coordinación |
+| [Nombre Cuco] | Documentación de estructuras y video |
 
-
-
-
+---
