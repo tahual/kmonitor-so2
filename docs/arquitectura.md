@@ -98,7 +98,7 @@ Acciones que realiza:
           │
           ├── proc_create("kmonitor_grupo9")
           │         │
-          │         └── Crea /proc/kmonitor_grupo9 ✅
+          │         └── Crea /proc/kmonitor_grupo9 
           │
           └── printk("Módulo cargado")
 
@@ -137,7 +137,7 @@ Acciones que realiza:
           │
           ├── remove_proc_entry("kmonitor_grupo9")
           │         │
-          │         └── Elimina /proc/kmonitor_grupo9 ✅
+          │         └── Elimina /proc/kmonitor_grupo9 
           │
           └── printk("Módulo descargado")
 ```
@@ -190,9 +190,9 @@ Makefile
 
 | Integrante | Rol |
 |---|---|
-| David Moscoso | Desarrollo del módulo principal y demostración |
-| [Nombre Persona 1] | Desarrollo del código kernel |
-| [Tu nombre] | Documentación y coordinación |
-| [Nombre Cuco] | Documentación de estructuras y video |
+| David | Desarrollo del módulo principal y demostración |
+| Derick | Desarrollo del código kernel |
+| Dany | Documentación y coordinación |
+| Marlon | Documentación de estructuras y video |
 
 ---
