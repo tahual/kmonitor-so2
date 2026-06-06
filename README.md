@@ -97,6 +97,7 @@ PID      ESTADO       NOMBRE
 
 - [Arquitectura de la solución](docs/arquitectura.md)
 - [Estructuras del kernel utilizadas](docs/estructuras.md)
+- [Tecnologias utilizadas](docs/tecnologias.md) 
 
 ---
 
